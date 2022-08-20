@@ -16,18 +16,6 @@ public class BaseTest {
     protected static ExtentHtmlReporter htmlReport;
     protected static ExtentReports report;
 
-    @BeforeSuite
-    public void BeforeSuite() {
-        htmlReport = new ExtentHtmlReporter("testResoults.html");
-        report = new ExtentReports();
-        report.attachReporter(htmlReport);
-    }
-    @AfterSuite
-    public void AfterSuite() {
-        htmlReport.flush();
-        report.flush();
-    }
-
     @BeforeMethod
     public void Setup(){
         driver = DriverFactory.getDriver();
